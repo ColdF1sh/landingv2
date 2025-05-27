@@ -3,48 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Бакалаврська робота - Лендінг сторінка з детальним описом дослідження та результатів">
-    <meta name="keywords" content="бакалаврська робота, лендінг, дослідження, наукова робота">
-    <meta name="author" content="Ваше ім'я">
+    <meta name="description" content="Інформаційна система онлайн-реєстрації клієнтів до закладів сфери обслуговування - мобільний додаток для зручного запису до перукарень, салонів краси та інших закладів обслуговування">
+    <meta name="keywords" content="онлайн-реєстрація, мобільний додаток, перукарні, салони краси, запис онлайн, сервіс обслуговування">
+    <meta name="author" content="Білоконь Артем">
     
     <!-- Open Graph теги -->
-    <meta property="og:title" content="Бакалаврська робота">
-    <meta property="og:description" content="Детальний опис бакалаврської роботи з результатами дослідження">
+    <meta property="og:title" content="Інформаційна система онлайн-реєстрації клієнтів">
+    <meta property="og:description" content="Мобільний додаток для зручного запису до закладів сфери обслуговування">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://your-domain.com">
     <meta property="og:image" content="https://your-domain.com/images/og-image.jpg">
     
-    <title>Бакалаврська робота | Головна сторінка</title>
+    <title>Trimly</title>
     
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logosumdu.jpg">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/logosumdu.jpg">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/logosumdu.jpg">
     <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Перейти до основного контенту</a>
     
     <header role="banner">
-        <nav role="navigation" aria-label="Головне меню">
-            <div class="container">
+        <div class="container">
+            <div class="university-logo">
+                <img src="images/logosumdu.jpg" alt="Логотип університету" width="100" height="40">
+            </div>
+            <nav role="navigation" aria-label="Головне меню">
                 <ul class="nav-list">
                     <li><a href="#about" aria-current="page">Про роботу</a></li>
-                    <li><a href="#research">Дослідження</a></li>
+                    <li><a href="#relevance">Актуальність</a></li>
+                    <li><a href="#goals">Мета та завдання</a></li>
+                    <li><a href="#methodology">Методологія</a></li>
                     <li><a href="#results">Результати</a></li>
                     <li><a href="#contact">Контакти</a></li>
                 </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
 
     <main id="main-content" role="main">
         <article itemscope itemtype="http://schema.org/Article">
-            <header>
+            <header class="article-header">
                 <h1 itemprop="headline">Інформаційна система онлайн-реєстрації клієнтів до закладів сфери обслуговування</h1>
+                <h2 class="subtitle" lang="en">Information system for online registration of clients for service establishments</h2>
                 <div class="meta" itemprop="author" itemscope itemtype="http://schema.org/Person">
                     <span itemprop="name">Білоконь Артем</span>
                 </div>
@@ -52,19 +58,65 @@
 
             <section id="about" aria-labelledby="about-heading">
                 <h2 id="about-heading">Про роботу</h2>
-                <div itemprop="description">
+                <div itemprop="description" class="description">
+                    <p>Розробка мобільного додатку для зручної онлайн-реєстрації клієнтів до закладів сфери обслуговування, таких як перукарні та салони краси. Система дозволить оптимізувати процес запису, зменшити час очікування та покращити якість обслуговування клієнтів.</p>
                 </div>
             </section>
 
-            <section id="research" aria-labelledby="research-heading">
-                <h2 id="research-heading">Дослідження</h2>
-                <div itemprop="articleBody">
+            <section id="relevance" aria-labelledby="relevance-heading">
+                <h2 id="relevance-heading">Актуальність теми</h2>
+                <div class="relevance-content">
+                    <p>У сучасному світі зростає потреба в швидкому та зручному доступі до послуг закладів обслуговування. Традиційний спосіб запису через телефонні дзвінки має низку недоліків:</p>
+                    <ul>
+                        <li>Втрата часу на очікування відповіді</li>
+                        <li>Складність у виборі зручного часу</li>
+                        <li>Відсутність можливості перегляду доступних послуг та цін</li>
+                        <li>Необхідність повторних дзвінків для підтвердження</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section id="goals" aria-labelledby="goals-heading">
+                <h2 id="goals-heading">Мета та завдання</h2>
+                <div class="goals-content">
+                    <h3>Мета дослідження</h3>
+                    <p>Розробка та впровадження інформаційної системи для оптимізації процесу запису клієнтів до закладів сфери обслуговування.</p>
+                    
+                    <h3>Основні завдання</h3>
+                    <ol>
+                        <li>Провести аналіз існуючих систем онлайн-реєстрації та визначити їх переваги та недоліки</li>
+                        <li>Розробити архітектуру мобільного додатку з урахуванням потреб користувачів</li>
+                        <li>Створити зручний інтерфейс для клієнтів та адміністраторів закладів</li>
+                        <li>Реалізувати систему сповіщень та нагадувань про запис</li>
+                        <li>Забезпечити безпеку та конфіденційність даних користувачів</li>
+                    </ol>
+                </div>
+            </section>
+
+            <section id="methodology" aria-labelledby="methodology-heading">
+                <h2 id="methodology-heading">Методологія дослідження</h2>
+                <div class="methodology-content">
+                    <p>Для розробки системи використовується наступна методологія:</p>
+                    <ul>
+                        <li>Аналіз вимог та збір даних про потреби користувачів</li>
+                        <li>Проектування архітектури системи</li>
+                        <li>Розробка прототипу інтерфейсу</li>
+                        <li>Тестування та валідація функціоналу</li>
+                        <li>Впровадження та моніторинг роботи системи</li>
+                    </ul>
                 </div>
             </section>
 
             <section id="results" aria-labelledby="results-heading">
-                <h2 id="results-heading">Результати</h2>
-                <div>
+                <h2 id="results-heading">Очікувані результати</h2>
+                <div class="results-content">
+                    <ul>
+                        <li>Функціональний мобільний додаток для онлайн-реєстрації</li>
+                        <li>Зручний інтерфейс для користувачів та адміністраторів</li>
+                        <li>Система сповіщень та нагадувань</li>
+                        <li>Аналітична панель для закладів</li>
+                        <li>Документація з інструкціями по використанню</li>
+                    </ul>
                 </div>
             </section>
         </article>
@@ -75,10 +127,11 @@
             <section id="contact" aria-labelledby="contact-heading">
                 <h2 id="contact-heading">Контакти</h2>
                 <address>
+                    <p>Автор: <span itemprop="author">Білоконь Артем</span></p>
                     <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
                 </address>
             </section>
-            <p>&copy; 2025 Ваше ім'я. Всі права захищені.</p>
+            <p>&copy; 2025 Білоконь Артем. Всі права захищені.</p>
         </div>
     </footer>
 </body>
