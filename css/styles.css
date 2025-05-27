@@ -1,0 +1,41 @@
+/* Базові стилі */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --text-color: #333;
+    --background-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Контейнер */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Адаптивні зображення */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Медіа-запити для адаптивності */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px;
+    }
+} 
