@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
 /* Базові стилі */
 :root {
-    --primary-color: #007bff;
-    --secondary-color: #6c757d;
-    --text-color: #333;
+    --primary-color: #7c3aed; /* фіолетовий */
+    --primary-dark: #5b21b6;
+    --secondary-color: #f3f0ff;
+    --text-color: #222;
     --background-color: #fff;
-    --link-color: #0056b3;
-    --link-hover-color: #003d82;
+    --link-color: #7c3aed;
+    --link-hover-color: #5b21b6;
     --focus-outline: 3px solid var(--primary-color);
-    --section-spacing: 4rem;
+    --section-spacing: 3rem;
+    --border-radius: 16px;
+    --shadow: 0 4px 24px rgba(124, 58, 237, 0.08);
+    --max-content-width: 800px;
 }
 
 * {
@@ -17,10 +23,11 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.7;
     color: var(--text-color);
     background-color: var(--background-color);
+    min-height: 100vh;
 }
 
 /* Пропустити посилання */
@@ -44,42 +51,45 @@ body {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 20px;
 }
 
 /* Логотип університету */
 .university-logo {
-    padding: 1rem 0;
+    padding: 1rem 0 0.5rem 0;
     text-align: center;
 }
 
 .university-logo img {
-    max-width: 200px;
+    max-width: 100px;
     height: auto;
+    border-radius: 12px;
+    box-shadow: var(--shadow);
 }
 
 /* Навігація */
 .nav-list {
     list-style: none;
     display: flex;
-    gap: 20px;
-    padding: 1rem 0;
+    gap: 24px;
+    padding: 1rem 0 0.5rem 0;
     justify-content: center;
     flex-wrap: wrap;
 }
 
 .nav-list a {
-    color: var(--text-color);
+    color: var(--primary-color);
     text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.2s, color 0.2s;
 }
 
 .nav-list a:hover,
 .nav-list a:focus {
-    background-color: var(--primary-color);
-    color: white;
+    background: var(--primary-color);
+    color: #fff;
 }
 
 .nav-list a:focus {
@@ -89,56 +99,67 @@ body {
 /* Заголовки */
 .article-header {
     text-align: center;
-    padding: 2rem 0;
-    margin-bottom: 2rem;
+    padding: 2.5rem 0 1.5rem 0;
+    margin-bottom: 1.5rem;
 }
 
 h1 {
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     margin-bottom: 1rem;
-    line-height: 1.2;
+    font-weight: 700;
+    color: var(--primary-color);
 }
 
 h2 {
     font-size: 2rem;
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    text-align: center;
 }
 
 h3 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    line-height: 1.2;
+    font-size: 1.3rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+    color: var(--primary-color);
 }
 
 .subtitle {
-    color: var(--secondary-color);
-    font-size: 1.5rem;
+    color: var(--primary-dark);
+    font-size: 1.2rem;
     margin-bottom: 1rem;
+    font-weight: 400;
 }
 
 /* Секції */
 section {
     margin: var(--section-spacing) 0;
     padding: 2rem 0;
+    background: #fff;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    max-width: var(--max-content-width);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section:nth-child(even) {
-    background-color: #f8f9fa;
+    background: var(--secondary-color);
 }
 
 /* Опис */
-.description {
-    max-width: 800px;
+.description, .goals-content, .methodology-content, .results-content, .relevance-content {
+    max-width: 700px;
     margin: 0 auto;
-    text-align: center;
     font-size: 1.1rem;
+    text-align: left;
 }
 
 /* Списки */
 ul, ol {
-    margin: 1rem 0;
-    padding-left: 2rem;
+    margin: 1rem 0 1rem 1.5rem;
+    padding-left: 1.2rem;
 }
 
 li {
@@ -149,17 +170,20 @@ li {
 .button {
     display: inline-block;
     padding: 1rem 2rem;
-    background-color: var(--primary-color);
-    color: white;
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-dark));
+    color: #fff;
     text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(124,58,237,0.10);
+    transition: background 0.2s, transform 0.2s;
 }
 
 .button:hover,
 .button:focus {
-    background-color: var(--link-hover-color);
-    text-decoration: none;
+    background: var(--primary-dark);
+    transform: translateY(-2px) scale(1.03);
 }
 
 /* Контакти */
@@ -172,46 +196,33 @@ address {
     font-style: normal;
     margin: 1rem 0;
     text-align: center;
+    color: var(--primary-dark);
 }
 
 /* Метадані */
 .meta {
-    color: var(--secondary-color);
+    color: var(--primary-dark);
     margin-bottom: 1rem;
     text-align: center;
+    font-size: 1rem;
 }
 
 /* Медіа-запити для адаптивності */
-@media (max-width: 768px) {
-    .container {
-        padding: 0 10px;
-    }
+@media (max-width: 900px) {
+    .container { max-width: 98vw; }
+    section { padding: 1.2rem 0.5rem; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.3rem; }
+}
 
-    .nav-list {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-
-    h1 {
-        font-size: 2rem;
-    }
-
-    h2 {
-        font-size: 1.75rem;
-    }
-
-    h3 {
-        font-size: 1.25rem;
-    }
-
-    .subtitle {
-        font-size: 1.25rem;
-    }
-
-    section {
-        padding: 1rem 0;
-    }
+@media (max-width: 600px) {
+    .container { padding: 0 5px; }
+    .nav-list { flex-direction: column; gap: 8px; }
+    .university-logo img { max-width: 70px; }
+    section { padding: 0.7rem 0.2rem; }
+    h1 { font-size: 1.2rem; }
+    h2 { font-size: 1.1rem; }
+    .description, .goals-content, .methodology-content, .results-content, .relevance-content { font-size: 1rem; }
 }
 
 /* Покращення доступності для фокусу */
@@ -224,7 +235,38 @@ address {
     :root {
         --text-color: #000;
         --background-color: #fff;
-        --link-color: #0000EE;
-        --link-hover-color: #551A8B;
+        --link-color: #7c3aed;
+        --link-hover-color: #5b21b6;
     }
+}
+
+header {
+    background: var(--secondary-color);
+    box-shadow: var(--shadow);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+footer {
+    background: var(--secondary-color);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-top: 3rem;
+    padding-bottom: 1.5rem;
+}
+footer p {
+    text-align: center;
+    color: var(--primary-dark);
+    font-size: 1rem;
+    margin-top: 1.5rem;
+}
+
+img, picture, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 12px;
 } 
