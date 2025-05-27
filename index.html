@@ -3,12 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Бакалаврська робота - Лендінг сторінка">
-    <meta name="keywords" content="бакалаврська робота, лендінг">
+    <meta name="description" content="Бакалаврська робота - Лендінг сторінка з детальним описом дослідження та результатів">
+    <meta name="keywords" content="бакалаврська робота, лендінг, дослідження, наукова робота">
     <meta name="author" content="Ваше ім'я">
-    <title>Бакалаврська робота</title>
+    
+    <!-- Open Graph теги -->
+    <meta property="og:title" content="Бакалаврська робота">
+    <meta property="og:description" content="Детальний опис бакалаврської роботи з результатами дослідження">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com">
+    <meta property="og:image" content="https://your-domain.com/images/og-image.jpg">
+    
+    <title>Бакалаврська робота | Головна сторінка</title>
+    
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
+    
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -16,18 +26,60 @@
     <link rel="manifest" href="favicon/site.webmanifest">
 </head>
 <body>
-    <header>
-        <nav>
-            <!-- Навігація буде додана пізніше -->
+    <a href="#main-content" class="skip-link">Перейти до основного контенту</a>
+    
+    <header role="banner">
+        <nav role="navigation" aria-label="Головне меню">
+            <div class="container">
+                <ul class="nav-list">
+                    <li><a href="#about" aria-current="page">Про роботу</a></li>
+                    <li><a href="#research">Дослідження</a></li>
+                    <li><a href="#results">Результати</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <main>
-        <!-- Основний контент буде доданий пізніше -->
+    <main id="main-content" role="main">
+        <article itemscope itemtype="http://schema.org/Article">
+            <header>
+                <h1 itemprop="headline">Інформаційна система онлайн-реєстрації клієнтів до закладів сфери обслуговування</h1>
+                <div class="meta" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                    <span itemprop="name">Білоконь Артем</span>
+                </div>
+            </header>
+
+            <section id="about" aria-labelledby="about-heading">
+                <h2 id="about-heading">Про роботу</h2>
+                <div itemprop="description">
+                </div>
+            </section>
+
+            <section id="research" aria-labelledby="research-heading">
+                <h2 id="research-heading">Дослідження</h2>
+                <div itemprop="articleBody">
+                </div>
+            </section>
+
+            <section id="results" aria-labelledby="results-heading">
+                <h2 id="results-heading">Результати</h2>
+                <div>
+                </div>
+            </section>
+        </article>
     </main>
 
-    <footer>
-        <!-- Футер буде доданий пізніше -->
+    <footer role="contentinfo">
+        <div class="container">
+            <section id="contact" aria-labelledby="contact-heading">
+                <h2 id="contact-heading">Контакти</h2>
+                <address>
+                    <p>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                </address>
+            </section>
+            <p>&copy; 2025 Ваше ім'я. Всі права захищені.</p>
+        </div>
     </footer>
 </body>
 </html> 
